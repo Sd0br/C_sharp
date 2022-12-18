@@ -5,7 +5,7 @@ int GetNumberFromConsole(string message)
 
     while(true)
     {
-        Console.WriteLine(message);
+        Console.Write(message);
 
         if(int.TryParse(Console.ReadLine(), out result))
         {
@@ -20,27 +20,24 @@ int GetNumberFromConsole(string message)
     return result;
 }
 
-
-//генерирует случайно число в границах [leftBoard, rightBoard]
-int GetRandomNumber(int leftBoard, int rightBoard)
+int ReturnMaxNumber (int numberOne, int numberTwo)
 {
-    Random rnd = new Random();
-
-    int result = rnd.Next(leftBoard, rightBoard + 1); //[leftBoard, rightBoard)
-
-    return result;
+    int max = numberOne;
+    if (numberTwo > numberOne)
+    {
+        max = numberTwo;
+    }
+   
+    return max;
 }
 
-int leftRange = GetNumberFromConsole("Введите левую границу диапазона рандомного значения:");
-int rightRange = GetNumberFromConsole("Введите правую границу диапазона рандомного значения:");
-int number = GetRandomNumber(leftRange, rightRange);
+int firtstNumber = GetNumberFromConsole("Input first number: ");
+int secondNumber = GetNumberFromConsole("Input second number: ");
+int thirdNumber = GetNumberFromConsole("Input third number: ");
 
-Console.WriteLine($"Рандомное число: {number}");
+int max = firtstNumber;
 
-int firstDigit = number / 100;
-int thirdDigit = number % 10;
+max = ReturnMaxNumber(firtstNumber, secondNumber);
+max = ReturnMaxNumber(max, thirdNumber);
 
-int result = firstDigit * 10 + thirdDigit;
-
-Console.WriteLine(result);
-
+Console.WriteLine ($"Maximum number is  {max}");
