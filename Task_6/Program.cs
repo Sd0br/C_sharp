@@ -5,7 +5,7 @@ int GetNumberFromConsole(string message)
 
     while(true)
     {
-        Console.WriteLine(message);
+        Console.Write(message);
 
         if(int.TryParse(Console.ReadLine(), out result))
         {
@@ -20,26 +20,12 @@ int GetNumberFromConsole(string message)
     return result;
 }
 
-bool flag = false;
-int firtstNumber = GetNumberFromConsole("Input first number");
-int secondNumber = GetNumberFromConsole("Input second number");
-
-if (firtstNumber*firtstNumber == secondNumber)
-{
-flag = true;
-}
-
-if (secondNumber*secondNumber == firtstNumber)
-{
-flag = true;
-}
-
-if (flag)
-{
-    Console.WriteLine("Yes");
-}
+int numberOne = GetNumberFromConsole("Enter the number: ");
+if ((numberOne%2) == 0)
+    {
+        Console.WriteLine($"Number {numberOne} is even");
+    }
 else
-{
-    Console.WriteLine("No");
-}
-
+    {
+        Console.WriteLine($"Number {numberOne} is odd");
+    }
