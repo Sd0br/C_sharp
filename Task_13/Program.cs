@@ -23,5 +23,13 @@ int GetNumberFromConsole(string message)
 int number = GetNumberFromConsole("Enter the number: ");
 
 double countOfNumber = Math.Floor(Math.Log10(number) + 1);
-Console.WriteLine(countOfNumber);
-
+// Console.WriteLine(countOfNumber);
+if (countOfNumber < 3)
+    {
+      Console.WriteLine("There isn't third number");
+    }
+else
+    {
+      string numberStr = number.ToString();
+      Console.WriteLine(numberStr[2]);
+    }
