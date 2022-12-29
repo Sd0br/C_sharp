@@ -35,6 +35,7 @@ while (index < NumberLength / 2)
 if (NumberToString[index] != NumberToString[NumberLength - index -1])
     {
         Flag = false;
+        Console.WriteLine($"The number {NumberToString} is not a palindrome");
         break;
     }
 index++;  
@@ -44,9 +45,3 @@ if (Flag)
     {
         Console.WriteLine($"The number {NumberToString} is a palindrome");
     }
-else
-    {
-        Console.WriteLine($"The number {NumberToString} is not a palindrome");
-    }
-
-
