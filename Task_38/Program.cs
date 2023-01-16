@@ -66,6 +66,7 @@ int countElement = GetNumber("Enter number of array's elements ");
 double[] MainArray = NewArray(countElement);
 double max = MaxArray(MainArray, countElement);
 double min = MinArray(MainArray, countElement);
-Console.WriteLine($"Maximum array element is {max}");
-Console.WriteLine($"Minimum array element is {min}");
+double difference = max-min;
+Console.WriteLine($"Difference between max {max} and min {min} array element is {difference}");
+
 
