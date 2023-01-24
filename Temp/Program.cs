@@ -94,6 +94,7 @@ PrintArray(reverseArr);
 
 */
 
+/*
 Console.WriteLine("Input a number");
 int dimenssion = int.Parse(Console.ReadLine());
 int[] ourArray =new int[dimenssion];
@@ -114,4 +115,13 @@ void PrintArray(int[] array)
 }
 
 PrintArray(ourArray);
+*/
+
+double a = 2;
+double b = 4;
+
+// double x = Convert.ToDouble(a) / Convert.ToDouble(b);
+double x = a / b;
+Console.Write(x);
+
 
