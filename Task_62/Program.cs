@@ -23,46 +23,35 @@ int[,] table = new int [4, 4];
 PrintTable(table);
 int count = 1;
 
-for (int n = 1; n <= 4; n++)
+for (int n = 0; n <= 3; n++)
     {
-        table[0, n-1] = count;
-        count++;
+        table[0, n] = count++;
     }
     
 for (int n = 1; n < 4; n++)
     {
-        table[n, 3] = count;
-        count++;
+        table[n, 3] = count++;
     }
 
 for (int n = 2; n >= 0; n--)
     {
-        table[3, n] = count;
-        count++;
+        table[3, n] = count++;
     }
-
 
 for (int n = 2; n >= 1; n--)
     {
-        table[n, 0] = count;
-        count++;
+        table[n, 0] = count++;
     }
 
 for (int n = 1; n <= 2; n++)
   {
-    Console.WriteLine("In for"); 
-    table[1, n] = count;
-    count++;
+    table[1, n] = count++;
   }
 
 for (int n = 2; n >= 1; n--)
  {
-    table[2, n] = count;
-    count++;
+    table[2, n] = count++;
  }
-
-
-
 
 Console.WriteLine("");
 PrintTable(table);
