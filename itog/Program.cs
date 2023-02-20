@@ -6,14 +6,29 @@ void PrintTable(string[] tab)
     {
         Console.Write($"{tab[i]} ");
     }
+    Console.WriteLine();
 }
 
 
-string[] firstArray = {"123", "asdfsasdf", "12345"};
-string[] secondArray;
+string[] firstArray = {"Hello", "2", "world", ":-)"};
+string[] secondArray = new string[firstArray.Length];
 
 PrintTable(firstArray);
-Console.WriteLine(firstArray[0].Length);
+
+
+int count = 0;
+for (int i = 0; i < firstArray.GetLength(0); i++)
+{
+        if (firstArray[i].Length <= 3)
+        {
+            secondArray[count] = firstArray[i];
+            count++;
+        }
+}
+
+PrintTable(secondArray);
+
+
 
 
 
