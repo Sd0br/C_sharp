@@ -10,8 +10,11 @@ void PrintTable(string[] tab)
 
 
 string[] firstArray = {"123", "asdfsasdf", "12345"};
+string[] secondArray;
 
 PrintTable(firstArray);
+Console.WriteLine(firstArray[0].Length);
+
 
 
 
